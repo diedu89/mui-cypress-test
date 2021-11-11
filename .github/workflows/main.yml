@@ -1,9 +1,6 @@
 on:
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: mui-cypress-test
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +14,6 @@ jobs:
     
     - name: Install dependencies
       run: npm install
-      working-directory: mui-cypress-test
                 
     - name: Cypress run with env
       uses: cypress-io/github-action@v2
